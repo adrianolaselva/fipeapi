@@ -1,5 +1,7 @@
 {
     "name": "adrianolaselva/fipeapi",
+    "description": "Componente de integração com APIs da Fipe",
+    "version": "0.1.0",
     "authors": [
         {
             "name": "Adriano M. La Selva",
