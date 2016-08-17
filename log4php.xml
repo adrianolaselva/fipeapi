@@ -1,0 +1,27 @@
+<configuration xmlns:log4php="http://logging.apache.org/log4php/">
+
+    <appender name="default" class="LoggerAppenderDailyFile">
+        <param name="file" value="logs/%s.log" />
+        <param name="datePattern" value="Y-m-d" />
+        <layout class="LoggerLayoutPattern">
+            <param name="ConversionPattern" value="%d{Y-m-d H:i:s} [%p] %c: %m (at %F line %L)%n%ex"/>
+        </layout>
+    </appender>
+
+    <appender name="errorLog" class="LoggerAppenderFile">
+        <param name="file" value="error.log"/>
+        <layout class="LoggerLayoutPattern">
+            <param name="ConversionPattern" value="%d{Y-m-d H:i:s} [%p] %c: %m (at %F line %L)%n%ex%n"/>
+        </layout>
+        <filter class="LoggerFilterLevelRange">
+            <param name="LevelMin" value="error"/>
+            <param name="LevelMax" value="fatal"/>
+        </filter>
+        <filter class="LoggerFilterDenyAll"/>
+    </appender>
+
+    <root>
+        <level value="ALL"/>
+        <appender_ref ref="default"/>
+    </root>
+</configuration>
