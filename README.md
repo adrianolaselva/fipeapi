@@ -6,12 +6,12 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/adrianolaselva/fipeapi/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/adrianolaselva/fipeapi/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/adrianolaselva/fipeapi/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/adrianolaselva/fipeapi/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/adrianolaselva/fipeapi/badges/build.png?b=master)](https://scrutinizer-ci.com/g/adrianolaselva/fipeapi/build-status/master)
-[![License](https://poser.pugx.org/adrianolaselva/fipeapi/license)](https://packagist.org/packages/adrianolaselva/fipeapi)
 
 [![Total Downloads](https://poser.pugx.org/adrianolaselva/fipeapi/downloads)](https://packagist.org/packages/adrianolaselva/fipeapi)
 [![Monthly Downloads](https://poser.pugx.org/adrianolaselva/fipeapi/d/monthly)](https://packagist.org/packages/adrianolaselva/fipeapi)
 [![Daily Downloads](https://poser.pugx.org/adrianolaselva/fipeapi/d/daily)](https://packagist.org/packages/adrianolaselva/fipeapi)
 
+[![License](https://poser.pugx.org/adrianolaselva/fipeapi/license)](https://packagist.org/packages/adrianolaselva/fipeapi)
 
 ## Pacote de integração com APIs da Fipe
 
