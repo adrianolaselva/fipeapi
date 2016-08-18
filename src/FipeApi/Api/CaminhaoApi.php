@@ -6,15 +6,18 @@ use FipeApi\ApiAbstract;
 use FipeApi\Constants\Tipo;
 use FipeApi\Client;
 
+/**
+ * Class CaminhaoApi
+ *
+ * @package FipeApi\Api
+ */
 class CaminhaoApi extends ApiAbstract
 {
-    /**
-     * @var \Logger
-     */
-    private $logger;
 
     /**
-     * Caminhao constructor.
+     * CaminhaoApi constructor.
+     *
+     * @param Client|null $client
      */
     public function __construct(Client $client = null)
     {

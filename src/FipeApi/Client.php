@@ -5,6 +5,7 @@ use FipeApi\Constants\FipeApiParameter;
 
 /**
  * Class Client
+ *
  * @package FipeApi
  */
 class Client
@@ -27,7 +28,7 @@ class Client
     /**
      * Client constructor.
      *
-     * @param array $params
+     * @param array|null $params
      * @throws \Exception
      */
     public function __construct(array $params = null)

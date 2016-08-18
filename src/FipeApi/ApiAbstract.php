@@ -14,7 +14,7 @@ abstract class ApiAbstract
     /**
      * @var \Logger
      */
-    private $logger;
+    protected $logger;
 
     /**
      * @var Client
@@ -33,10 +33,13 @@ abstract class ApiAbstract
 
     /**
      * ApiAbstract constructor.
+     * @param $tipo
+     * @param Client|null $client
      */
     public function __construct($tipo, Client $client = null)
     {
-        $this->logger = \Logger::getLogger(__CLASS__);
+        if(is_null($this->logger))
+            $this->logger = \Logger::getLogger(__CLASS__);
 
         $this->_curl = new Curl();
         $this->tipo = $tipo;

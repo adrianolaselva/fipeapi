@@ -7,18 +7,16 @@ use FipeApi\Constants\Tipo;
 use FipeApi\Client;
 
 /**
- * Class Moto
+ * Class MotoApi
+ *
  * @package FipeApi\Api
  */
 class MotoApi extends ApiAbstract
 {
-    /**
-     * @var \Logger
-     */
-    private $logger;
 
     /**
-     * Moto constructor.
+     * MotoApi constructor.
+     * @param Client|null $client
      */
     public function __construct(Client $client = null)
     {

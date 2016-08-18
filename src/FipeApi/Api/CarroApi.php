@@ -7,18 +7,16 @@ use FipeApi\Constants\Tipo;
 use FipeApi\Client;
 
 /**
- * Class Carro
+ * Class CarroApi
+ *
  * @package FipeApi\Api
  */
 class CarroApi extends ApiAbstract
 {
-    /**
-     * @var \Logger
-     */
-    private $logger;
 
     /**
-     * Carro constructor.
+     * CarroApi constructor.
+     * @param Client|null $client
      */
     public function __construct(Client $client = null)
     {
