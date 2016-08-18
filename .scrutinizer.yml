@@ -1,0 +1,16 @@
+filter:
+    excluded_paths:
+        - 'tests/*'
+        - 'vendor/*'
+checks:
+    php: true
+coding_style:
+    php:
+        spaces:
+            around_operators:
+                concatenation: true
+            before_keywords:
+                else: false
+                catch: false
+            within:
+                brackets: true
