@@ -1,7 +1,6 @@
 [![version][packagist-badge]][packagist]
 [packagist-badge]: https://img.shields.io/packagist/v/adrianolaselva/fipeapi.svg
 [packagist]: https://packagist.org/packages/adrianolaselva/fipeapi
-
 [![Build Status](https://travis-ci.org/adrianolaselva/fipeapi.svg?branch=master)](https://travis-ci.org/adrianolaselva/fipeapi)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/adrianolaselva/fipeapi/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/adrianolaselva/fipeapi/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/adrianolaselva/fipeapi/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/adrianolaselva/fipeapi/?branch=master)
