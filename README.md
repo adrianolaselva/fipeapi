@@ -2,7 +2,6 @@
 [![Build Status](https://travis-ci.org/adrianolaselva/fipeapi.svg?branch=master)](https://travis-ci.org/adrianolaselva/fipeapi)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/adrianolaselva/fipeapi/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/adrianolaselva/fipeapi/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/adrianolaselva/fipeapi/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/adrianolaselva/fipeapi/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/adrianolaselva/fipeapi/badges/build.png?b=master)](https://scrutinizer-ci.com/g/adrianolaselva/fipeapi/build-status/master)
 
 ## Pacote de integração com APIs da Fipe
 
