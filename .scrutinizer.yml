@@ -14,11 +14,3 @@ coding_style:
                 catch: false
             within:
                 brackets: true
-build:
-    tests:
-        override:
-            -
-                command: 'phpunit --coverage-clover=fipe-api'
-                coverage:
-                    file: 'fipe-api'
-                    format: 'clover'
