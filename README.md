@@ -1,6 +1,6 @@
-## Componente de integração com APIs da Fipe
+## Pacote de integração com APIs da Fipe
 
-Este Projeto tem por finalidade prover uma integração menos traumática e padronizada com as API's da smartbill
+Este Projeto tem por finalidade prover uma integração menos traumática e padronizada com as API's de consulta da Fipe
 
 ### Descrição
 
@@ -16,10 +16,10 @@ $client = new \FipeApi\Client([
 Caso o parâmetro do construtor seja passado como nulo, as seguintes informações serão usadas como padrão.
 
     'FIPE_API_HOST' = 'http://fipeapi.appspot.com/api/1/'
-    'FIPE_API_FIPE_API_TIMEOUT' = 10
+    'FIPE_API_TIMEOUT' = 10
 
-Para iniciar as consultas basta instânciar uma das classes presentes no pacote "Fipe\Api\*", passar o Client 
-como parâmetro do construtor, ou deixar vazio para que seja acatado o padrão, ficando da seguinte forma:
+Para iniciar as consultas basta instânciar uma das classes presentes no pacote "Fipe\Api\\*", passar a instância do Client 
+como parâmetro no construtor ou deixar vazio para que seja acatado o padrão, ficando da seguinte forma:
 
 ```php
 $caminhaoApi = new \FipeApi\Api\Caminhao();
@@ -28,7 +28,7 @@ $caminhaoApi = new \FipeApi\Api\Caminhao();
 Ou
 
 ```php
-$client = new \FipeApi\Api\Caminhao($client);
+$caminhaoApi = new \FipeApi\Api\Caminhao($client);
 ```
 
 Caso precise alterar os parâmetros após inicializado o client, basta fazer da seguinte forma:
