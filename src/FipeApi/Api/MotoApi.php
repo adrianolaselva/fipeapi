@@ -2,7 +2,7 @@
 
 namespace FipeApi\Api;
 
-use FipeApi\ApiAbstract;
+use FipeApi\AbstractApi;
 use FipeApi\Constants\Tipo;
 use FipeApi\Client;
 
@@ -11,7 +11,7 @@ use FipeApi\Client;
  *
  * @package FipeApi\Api
  */
-class MotoApi extends ApiAbstract
+class MotoApi extends AbstractApi
 {
 
     /**
@@ -20,7 +20,6 @@ class MotoApi extends ApiAbstract
      */
     public function __construct(Client $client = null)
     {
-        $this->logger = \Logger::getLogger(__CLASS__);
         parent::__construct(Tipo::MOTOS, $client);
     }
 }

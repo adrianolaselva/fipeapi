@@ -10,13 +10,9 @@ use FipeApi\Constants\FipeApiParameter;
  */
 class Client
 {
-    /**
-     * @var \Logger
-     */
-    private $logger;
 
     /**
-     * Timeout padrão
+     * URL padrão
      */
     const DEFAULT_URL = "http://fipeapi.appspot.com/api/1/";
 
@@ -33,7 +29,6 @@ class Client
      */
     public function __construct(array $params = null)
     {
-        $this->logger = \Logger::getLogger(__CLASS__);
 
         if(!is_null($params))
         {

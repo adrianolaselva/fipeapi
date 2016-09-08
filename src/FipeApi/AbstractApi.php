@@ -6,15 +6,11 @@ use Curl\Curl;
 use FipeApi\Constants\FipeApiParameter;
 
 /**
- * Class ApiAbstract
+ * Class AbstractApi
  * @package FipeApi
  */
-abstract class ApiAbstract
+abstract class AbstractApi
 {
-    /**
-     * @var \Logger
-     */
-    protected $logger;
 
     /**
      * @var Client
@@ -32,14 +28,12 @@ abstract class ApiAbstract
     protected $tipo;
 
     /**
-     * ApiAbstract constructor.
-     * @param $tipo
+     * AbstractApi constructor.
+     * @param string $tipo
      * @param Client|null $client
      */
     public function __construct($tipo, Client $client = null)
     {
-        if(is_null($this->logger))
-            $this->logger = \Logger::getLogger(__CLASS__);
 
         $this->_curl = new Curl();
         $this->tipo = $tipo;
@@ -66,7 +60,6 @@ abstract class ApiAbstract
             );
             return $this->getResponse();
         }catch(\Exception $ex){
-            $this->logger->error("Falha ao executar requisição", $ex);
             throw new \Exception($ex->getMessage());
         }
     }
@@ -87,7 +80,6 @@ abstract class ApiAbstract
             );
             return $this->getResponse();
         }catch(\Exception $ex){
-            $this->logger->error("Falha ao executar requisição", $ex);
             throw new \Exception($ex->getMessage());
         }
     }
@@ -110,7 +102,6 @@ abstract class ApiAbstract
             );
             return $this->getResponse();
         }catch(\Exception $ex){
-            $this->logger->error("Falha ao executar requisição", $ex);
             throw new \Exception($ex->getMessage());
         }
     }
@@ -127,7 +118,6 @@ abstract class ApiAbstract
             );
             return $this->getResponse();
         }catch(\Exception $ex){
-            $this->logger->error("Falha ao executar requisição", $ex);
             throw new \Exception($ex->getMessage());
         }
     }

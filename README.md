@@ -21,7 +21,6 @@ Este Projeto tem por finalidade prover uma integração menos traumática e padr
 #### require
 * PHP >= 5.6
 * php-curl-class/php-curl-class ^4.11
-* apache/log4php 2.3.0
 
 #### require-dev
 * phpunit/phpunit 5.2.12
