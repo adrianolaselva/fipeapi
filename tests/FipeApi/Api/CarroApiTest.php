@@ -7,9 +7,9 @@ use FipeApi\Factories\ConsultaApiFactory;
 use FipeApi\Interfaces\IConsultaApi;
 
 /**
- * Class CaminhaoApiTest
+ * Class CarroApiTest
  */
-class CaminhaoApiTest extends \PHPUnit_Framework_TestCase
+class CarroApiTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var IConsultaApi
@@ -37,7 +37,7 @@ class CaminhaoApiTest extends \PHPUnit_Framework_TestCase
     public function __construct()
     {
         parent::__construct();
-        $this->_consultaApi = ConsultaApiFactory::getInstance(Tipo::CAMINHOES);
+        $this->_consultaApi = ConsultaApiFactory::getInstance(Tipo::CARROS);
     }
 
     public function test_getMarcas()
@@ -49,12 +49,12 @@ class CaminhaoApiTest extends \PHPUnit_Framework_TestCase
         $this->assertNotNull($marcas['data'][0]);
         $this->assertNotNull($marcas['data'][0]['id']);
 
-        CaminhaoApiTest::$fabricanteAux = $marcas['data'][0]['id'];
+        CarroApiTest::$fabricanteAux = $marcas['data'][0]['id'];
     }
 
     public function test_getVeiculos()
     {
-        $veiculos = $this->_consultaApi->getVeiculos(CaminhaoApiTest::$fabricanteAux);
+        $veiculos = $this->_consultaApi->getVeiculos(CarroApiTest::$fabricanteAux);
 
         $this->assertEquals(200, $veiculos['http']['httpStatusCode']);
         $this->assertNotNull($veiculos['data'][0]['fipe_marca']);
@@ -64,12 +64,12 @@ class CaminhaoApiTest extends \PHPUnit_Framework_TestCase
         $this->assertNotNull($veiculos['data'][0]['id']);
         $this->assertNotNull($veiculos['data'][0]['fipe_name']);
 
-        CaminhaoApiTest::$veiculoAux = $veiculos['data'][0]['id'];
+        CarroApiTest::$veiculoAux = $veiculos['data'][0]['id'];
     }
 
     public function test_getModelos()
     {
-        $modelos = $this->_consultaApi->getModelos(CaminhaoApiTest::$fabricanteAux, CaminhaoApiTest::$veiculoAux);
+        $modelos = $this->_consultaApi->getModelos(CarroApiTest::$fabricanteAux, CarroApiTest::$veiculoAux);
 
         $this->assertEquals(200, $modelos['http']['httpStatusCode']);
         $this->assertNotNull($modelos['data'][0]['fipe_marca']);
@@ -80,12 +80,12 @@ class CaminhaoApiTest extends \PHPUnit_Framework_TestCase
         $this->assertNotNull($modelos['data'][0]['veiculo']);
         $this->assertNotNull($modelos['data'][0]['id']);
 
-        CaminhaoApiTest::$modeloAux = $modelos['data'][0]['id'];
+        CarroApiTest::$modeloAux = $modelos['data'][0]['id'];
     }
 
     public function test_getDetalhes()
     {
-        $modelos = $this->_consultaApi->getDetalhes(CaminhaoApiTest::$fabricanteAux, CaminhaoApiTest::$veiculoAux, CaminhaoApiTest::$modeloAux);
+        $modelos = $this->_consultaApi->getDetalhes(CarroApiTest::$fabricanteAux, CarroApiTest::$veiculoAux, CarroApiTest::$modeloAux);
 
         $this->assertEquals(200, $modelos['http']['httpStatusCode']);
         $this->assertNotNull($modelos['data']['referencia']);

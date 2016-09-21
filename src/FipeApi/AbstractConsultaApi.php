@@ -4,12 +4,13 @@ namespace FipeApi;
 
 use Curl\Curl;
 use FipeApi\Constants\FipeApiParameter;
+use FipeApi\Interfaces\IConsultaApi;
 
 /**
- * Class AbstractApi
+ * Class AbstractConsultaApi
  * @package FipeApi
  */
-abstract class AbstractApi
+abstract class AbstractConsultaApi implements IConsultaApi
 {
 
     /**
@@ -28,8 +29,8 @@ abstract class AbstractApi
     protected $tipo;
 
     /**
-     * AbstractApi constructor.
-     * @param string $tipo
+     * AbstractConsultaApi constructor.
+     * @param $tipo
      * @param Client|null $client
      */
     public function __construct($tipo, Client $client = null)
@@ -60,6 +61,7 @@ abstract class AbstractApi
             );
             return $this->getResponse();
         }catch(\Exception $ex){
+            var_dump($ex);
             throw new \Exception($ex->getMessage());
         }
     }

@@ -2,16 +2,16 @@
 
 namespace FipeApi\Api;
 
-use FipeApi\AbstractApi;
+use FipeApi\AbstractConsultaApi;
 use FipeApi\Constants\Tipo;
 use FipeApi\Client;
 
 /**
- * Class CaminhaoApi
+ * Class ConsultaCaminhaoApi
  *
  * @package FipeApi\Api
  */
-class CaminhaoApi extends AbstractApi
+class ConsultaCaminhaoApi extends AbstractConsultaApi
 {
 
     /**
