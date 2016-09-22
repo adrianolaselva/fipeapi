@@ -2,6 +2,8 @@
 
 namespace FipeApi\Factories;
 
+use FipeApi\Api\ConsultaCaminhaoApi;
+use FipeApi\Api\ConsultaCarroApi;
 use FipeApi\Api\ConsultaMotoApi;
 use FipeApi\Constants\Tipo;
 
@@ -23,8 +25,8 @@ class ConsultaApiFactory
         switch($tipo)
         {
             case Tipo::MOTOS: return new ConsultaMotoApi();
-            case Tipo::CAMINHOES: return new ConsultaMotoApi();
-            case Tipo::CARROS: return new ConsultaMotoApi();
+            case Tipo::CAMINHOES: return new ConsultaCaminhaoApi();
+            case Tipo::CARROS: return new ConsultaCarroApi();
         }
 
         throw new \Exception("Tipo {$tipo} não definido");
