@@ -14,7 +14,7 @@ class Client
     /**
      * URL padrão
      */
-    const DEFAULT_URL = "http://fipeapi.appspot.com/api/1/";
+    const DEFAULT_URL = "http://fipeapi.appspot.com/api/1";
 
     /**
      * Timeout padrão
@@ -43,10 +43,9 @@ class Client
         putenv(sprintf("%s=%s", FipeApiParameter::FIPE_API_TIMEOUT, Client::DEFAULT_TIMEOUT));
 
         if(!is_null($params) && is_array($params))
-        {
             foreach ($params as $key => $value)
                 putenv(sprintf("%s=%s",$key,$value));
-        }
+
     }
 
     /**
